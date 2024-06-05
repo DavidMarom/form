@@ -26,11 +26,12 @@ export const Label = styled.div`
   color: #24639C;
   margin-bottom: 10px;
   background-color: #EFF5FB;
-  width: 8rem;
+  width: 9rem;
   height: 2rem;
   border-radius: 15px;
   position: relative;
   top: -30px;
+  right: 70px;
 `;
 
 

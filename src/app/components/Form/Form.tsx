@@ -48,7 +48,7 @@ export default function FormWithReactHookFormAndZod() {
                             onChange={(ev: React.ChangeEvent<HTMLInputElement>) => { setYearsOld(yearGap(ev.target.value)) }}
                             type="date" placeholder="Date of Birth" className="px-4 py-2 rounded text-xs"
                         />
-                        {yearsOld > 0 ? <p>Age: {yearsOld}</p> : null}
+                        {yearsOld > 0 ? <p className="text-xs">({heb.age} {yearsOld})</p> : null}
                         {errors.dateOfBirth && (<p className="text-red-500 text-xs">{errors.dateOfBirth.message}</p>)}
 
                     </div>
