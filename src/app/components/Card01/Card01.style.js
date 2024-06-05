@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: ${({ width }) => width};
   margin-top: ${({ margintop }) => margintop};
   margin-right: ${({ marginright }) => marginright};
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 20px;
   padding-right: ${({ paddingright }) => paddingright};
   background-color: ${({ backgroundcolor }) => backgroundcolor};
@@ -14,7 +14,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: ${({ justifycontent }) => justifycontent};
-  /* overflow: hidden; */
   
   filter: drop-shadow(0 0 0.75rem #00000010);
 `;

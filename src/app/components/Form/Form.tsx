@@ -50,7 +50,6 @@ export default function FormWithReactHookFormAndZod() {
                         />
                         {yearsOld > 0 ? <p className="text-xs">({heb.age} {yearsOld})</p> : null}
                         {errors.dateOfBirth && (<p className="text-red-500 text-xs">{errors.dateOfBirth.message}</p>)}
-
                     </div>
 
                 </div>
@@ -60,15 +59,7 @@ export default function FormWithReactHookFormAndZod() {
                     {errors.email && (<p className="text-red-500 text-xs">{errors.email.message}</p>)}
                 </div>
                 <div>
-
-                    <button
-                        disabled={isSubmitting}
-                        type="submit"
-                        className="bg-blue-500 disabled:bg-gray-500 py-2 rounded font-color-white"
-                    >
-                        {heb.save}
-                    </button>
-
+                    <button disabled={isSubmitting} type="submit" className="bg-blue-500 disabled:bg-gray-500 py-2 rounded font-color-white">{heb.save}</button>
                 </div>
             </div>
         </form>

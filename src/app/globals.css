@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "heebo";
+  src: url("../../public/fonts/Heebo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   --foreground-rgb: 255, 250, 0;
   --background-start-rgb: 214, 219, 220;
@@ -19,7 +27,14 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "heebo", sans-serif;
+
+}
+
 body {
+  font-family: "heebo", sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
