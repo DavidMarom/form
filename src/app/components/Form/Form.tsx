@@ -9,7 +9,13 @@ export default function FormWithReactHookFormAndZod() {
     const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<formSchema>({ resolver: zodResolver(formTypes) });
 
     const onSubmit = async (data: formSchema) => {
-        console.log(data);
+        fetch("/api/form", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
         reset();
     };
 
@@ -30,7 +36,6 @@ export default function FormWithReactHookFormAndZod() {
 
             <input {...register("email")} type="email" placeholder="Email" className="px-4 py-2 rounded" />
             {errors.email && (<p className="text-red-500">{errors.email.message}</p>)}
-
 
             <button
                 disabled={isSubmitting}
